@@ -1,0 +1,27 @@
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.row-item {
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+  background-color: #f0f;
+  height: 200rpx;
+}
+
+.line-left {
+  border-left: 2rpx solid #fff;
+}
+
+.line-bottom {
+  border-bottom: 1rpx solid #fff;
+}
+
+.column-item {
+  display: flex;
+  flex: auto;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,8 @@
+<block wx:if="{{type==1}}">
+  <video autoplay="true" loop="true" enable-play-gesture="true" src="{{url}}" class="video-style">
+    <cover-image data-url="{{url}}" src="/images/ic_download.png" class="download" bindtap="downloadTap" />
+  </video>
+</block>
+<block wx:else>
+  <live-player autoplay="true" mode="live" src="{{url}}" class="video-style" bindstatechange="statechange" binderror="error" />
+</block>

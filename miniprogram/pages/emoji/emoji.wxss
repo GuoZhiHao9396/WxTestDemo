@@ -1,0 +1,12 @@
+.wxPreEmoji {
+  height: 60rpx;
+  width: 60rpx;
+  padding: 20rpx;
+  display: inline-flex;
+  flex: 1;
+}
+
+.sendEmoji {
+  height: 60rpx;
+  width: 60rpx;
+}

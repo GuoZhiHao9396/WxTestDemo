@@ -1,0 +1,8 @@
+<view style="display:flex;flex-direction: column;">
+  <view style="margin-bottom:20rpx;">当前网络：{{currentWifiName}} Mac地址：{{currentWifiMac}}</view>
+  <view style="margin-bottom:20rpx;">当前wifi列表</view>
+  <block wx:for="{{wifiList}}" wx:key="{{index}}">
+    <view>名称：{{item.name}}</view>
+    <view style="margin-bottom:20rpx;">mac：{{item.mac}}</view>
+  </block>
+</view>

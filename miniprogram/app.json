@@ -1,0 +1,89 @@
+{
+  "pages": [
+    "pages/kuaishou/kuaishou",
+    "pages/kuaishou/kuaishou2",
+    "pages/kuaishouplay/kuaishouplay",
+    "pages/main/main",
+    "pages/im/im",
+    "pages/map/map",
+    "pages/move/move",
+    "pages/wifi/wifi",
+    "pages/crowd/crowd",
+    "pages/emoji/emoji",
+    "pages/index/index",
+    "pages/citys/citys",
+    "pages/divide/divide",
+    "pages/canvas/canvas",
+    "pages/camera/camera",
+    "pages/webView/webView",
+    "pages/sideslip/sideslip",
+    "pages/showMode/showMode",
+    "pages/touchImage/touchImage",
+    "pages/popuwindow/popuwindow",
+    "pages/trackMatte/trackMatte",
+    "pages/pickerView/pickerView",
+    "pages/customTitle/customTitle",
+    "pages/customToast/customToast",
+    "pages/customBadge/customBadge",
+    "pages/wxAnimation/wxAnimation",
+    "pages/videoRecord/videoRecord",
+    "pages/audioRecord/audioRecord",
+    "pages/tencentVideo/tencentVideo",
+    "pages/customDialog/customDialog",
+    "pages/customCanvas/customCanvas",
+    "pages/pullToRefresh/pullToRefresh",
+    "pages/newGetUserInfo/newGetUserInfo",
+    "pages/datePickerView/datePickerView",
+    "pages/floatNavigation/floatNavigation",
+    "pages/textChangeImage/textChangeImage",
+    "pages/switchIndicator/switchIndicator",
+    "pages/verificationCode/verificationCode",
+    "pages/codePlay/codePlay"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "tabBar": {
+    "color": "#cad5db",
+    "selectedColor": "#FF8000",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/kuaishou/kuaishou",
+        "text": "关注",
+        "iconPath": "images/ic_attention_no.png",
+        "selectedIconPath": "images/ic_attention.png"
+      },
+      {
+        "pagePath": "pages/kuaishou/kuaishou2",
+        "text": "发现",
+        "iconPath": "images/ic_discovers_no.png",
+        "selectedIconPath": "images/ic_discovers.png"
+      },
+      {
+        "pagePath": "pages/main/main",
+        "text": "同城",
+        "iconPath": "images/ic_location_no.png",
+        "selectedIconPath": "images/ic_location.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#4b99fc",
+    "navigationBarBackgroundColor": "#4b99fc",
+    "navigationBarTitleText": "组件库",
+    "navigationBarTextStyle": "white",
+    "navigationStyle": "default"
+  },
+  "plugins": {
+    "tencentVideo": {
+      "version": "1.1.8",
+      "provider": "wxa75efa648b60994b"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

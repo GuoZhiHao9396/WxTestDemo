@@ -1,0 +1,6 @@
+<button open-type="share">消息转发群</button>
+<open-data type="groupName" open-gid="{{gid}}"/>
+<view class="userInfo">
+  <open-data type="userAvatarUrl" />
+</view>
+<open-data type="userNickName" lang="zh_CN"/>

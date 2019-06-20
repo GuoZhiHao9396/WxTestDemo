@@ -1,0 +1,11 @@
+<view class="display flex-direction-column align-items-center">
+  <!-- 方法一 -->
+  <canvas id="canvas-test" canvas-id="test" style="border-radius:10rpx;width:550rpx;height:65vh;margin-top:5vh;box-shadow: 4px 4px 6px #ccc;" />
+  <button style="margin-top:40rpx;" bindtap="createImg">绘制图片</button>
+  <button style="margin-top:40rpx;" bindtap="saveImg">保存图片，分享到朋友圈</button>
+  <!-- 方法二 -->
+  <!-- <image src="{{shareImage}}" class="share-image" />
+  <canvasdrawer painting="{{painting}}" class="canvasdrawer" bind:getImage="eventGetImage" />
+  <button bind:tap="eventDraw">绘制</button>
+  <button bind:tap="eventSave">保存到本地</button> -->
+</view>

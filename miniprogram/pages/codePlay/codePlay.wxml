@@ -1,0 +1,4 @@
+<view>
+  <image src="../../images/codeplay.png" style="width:200px;" />
+  <button bindtap="tapPlay">支付</button>
+</view>

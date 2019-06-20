@@ -1,0 +1,20 @@
+flex: auto 关键作用
+<view class="row">
+  <view class="row-item">
+    <view class="column-item ">01</view>
+  </view>
+  <view class="row-item">
+    <view class="column-item line-left line-bottom">02</view>
+    <view class="column-item line-left">03</view>
+  </view>
+  <view class="row-item">
+    <view class="column-item line-left line-bottom">04</view>
+    <view class="column-item line-left">05</view>
+  </view>
+</view>
+flex: 1 flex: 2 flex: 3 关键作用
+<view class="row">
+  <view style="background:#ff0000;display:flex;flex:1;">01</view>
+  <view style="background:#ffff00;display:flex;flex:2;">02</view>
+  <view style="background:#ff00ff;display:flex;flex:3;">03</view>
+</view>

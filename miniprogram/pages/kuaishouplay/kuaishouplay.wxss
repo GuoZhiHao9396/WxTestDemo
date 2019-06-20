@@ -1,0 +1,11 @@
+.video-style {
+  width: 750rpx;
+  height: 100vh;
+}
+
+.download {
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 680rpx;
+  margin-top: 20rpx;
+}

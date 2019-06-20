@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "GZH - KS小程序",
+  "navigationBarBackgroundColor": "#FF8000",
+  "navigationBarTextStyle": "white",
+  "backgroundColor": "#FFFFFF",
+  "enablePullDownRefresh": true,
+  "usingComponents": {}
+}

@@ -1,0 +1,47 @@
+<view class="ks-content">
+  <view class="left">
+    <block wx:for="{{note}}" wx:key="">
+      <template is="item" data="{{...item,index}}" wx:if="{{index%2==0}}" />
+    </block>
+  </view>
+  <view class="right">
+    <block wx:for="{{note}}" wx:key="">
+      <template is="item" data="{{...item,index}}" wx:if="{{index%2==1}}" />
+    </block>
+  </view>
+</view>
+<!--  下面是一个模块 -->
+<template name="item">
+  <view data-index="{{index}}" class="item" bindtap="itemTap">
+    <!--=============================== 图片 ===============================-->
+    <block wx:if="{{type==1}}">
+      <!-- 视频 -->
+      <block wx:if="{{soundTrack==null}}">
+        <image class="item-img" src="{{cover_thumbnail_urls[0].url}}" mode="widthFix" />
+      </block>
+      <block wx:else>
+        <image class="item-img" src="{{soundTrack.imageUrls[0].url}}" mode="widthFix" />
+      </block>
+    </block>
+    <block wx:else>
+      <!-- 直播 -->
+      <image class="item-img" src="{{cover_thumbnail_urls[0].url}}" mode="widthFix">
+        <view class="item-live-txt">
+          <view style="color:#3CFF00;margin-right:10rpx;">•</view>LIVE</view>
+      </image>
+    </block>
+    <!--=============================== 用户信息 ===============================-->
+    <view class="name">
+      <block wx:if="{{type==1}}">
+        <!-- 视频 -->
+        <image class="item-ava" src="{{headurls[0].url}}" />
+      </block>
+      <block wx:else>
+        <!-- 直播 -->
+        <image class="item-ava" src="{{user.headurl}}" />
+      </block>
+      <view class="flex" />
+      <view class="item-time">{{timestamp}}</view>
+    </view>
+  </view>
+</template>

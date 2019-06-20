@@ -1,0 +1,250 @@
+<!--index.wxml-->
+<view style="display:flex;flex-direction: column;">
+  <view style="display:flex;flex-direction: row;">
+    <view wx:for="{{3}}" wx:for-index="id" wx:key="{{index}}" id="{{id}}" style="flex:1;text-align:center;{{currentTab==id? 'border-bottom:5rpx solid #000;' : ''}}" bindtap="changeTap">{{item}}</view>
+  </view>
+  <swiper current="{{currentTab}}" bindchange="swChangeTap" style="height:2000rpx;">
+    <swiper-item>
+      <block wx:for-items="{{list}}" wx:key="{{item.id}}">
+        <view class="kind-list-item">
+          <!--外层布局-->
+          <view id="{{item.id}}" class="kind-list-item-hd {{item.open ? 'kind-list-item-hd-show' : ''}}" bindtap="kindToggle">
+            <view class="kind-list-text">{{item.name}}</view>
+            <image class="kind-list-img" src="resources/kind/{{item.id}}.png"></image>
+          </view>
+          <!--内层布局-->
+          <view class="kind-list-item-bd {{item.open ? 'kind-list-item-bd-show' : ''}}">
+            <view class="navigator-box {{item.open ? 'navigator-box-show' : ''}}">
+              <block wx:for-items="{{item.pages}}" wx:for-item="page" wx:key="*item">
+                <navigator url="pages/{{page.url}}" class="navigator">
+                  <view class="navigator-text">{{page.zh}}</view>
+                  <view class="navigator-arrow"></view>
+                </navigator>
+              </block>
+            </view>
+          </view>
+        </view>
+      </block>
+    </swiper-item>
+    <swiper-item style="height:1160rpx;">
+      <scroll-view scroll-y style="height:1160rpx;">
+        <view style="font-weight: bold">flex-direction</view>
+        <view style="margin:30rpx;">
+          row
+          <view style="display:flex;flex-direction:row">
+            <view style="background:#ff00ff;width:100rpx;height:100rpx;color:#fff">1</view>
+            <view style="background:#0000ff;width:100rpx;height:100rpx;color:#fff">2</view>
+            <view style="background:#00ff00;width:100rpx;height:100rpx;color:#fff">3</view>
+          </view>
+          row-reverse
+          <view style="display:flex;flex-direction:row-reverse">
+            <view style="background:#ff00ff;width:100rpx;height:100rpx;color:#fff">1</view>
+            <view style="background:#0000ff;width:100rpx;height:100rpx;color:#fff">2</view>
+            <view style="background:#00ff00;width:100rpx;height:100rpx;color:#fff">3</view>
+          </view>
+          column
+          <view style="display:flex;flex-direction:column">
+            <view style="background:#ff00ff;width:100rpx;height:100rpx;color:#fff">1</view>
+            <view style="background:#0000ff;width:100rpx;height:100rpx;color:#fff">2</view>
+            <view style="background:#00ff00;width:100rpx;height:100rpx;color:#fff">3</view>
+          </view>
+          column-reverse
+          <view style="display:flex;flex-direction:column-reverse">
+            <view style="background:#ff00ff;width:100rpx;height:100rpx;color:#fff">1</view>
+            <view style="background:#0000ff;width:100rpx;height:100rpx;color:#fff">2</view>
+            <view style="background:#00ff00;width:100rpx;height:100rpx;color:#fff">3</view>
+          </view>
+        </view>
+        <view style="font-weight: bold">flex-wrap</view>
+        <view style="margin:30rpx;">
+          nowrap
+          <view style="display:flex;flex-wrap:nowrap">
+            <view style="background:#ff00ff;width:100rpx;height:100rpx;color:#fff">1</view>
+            <view style="background:#0000ff;width:100rpx;height:100rpx;color:#fff">2</view>
+            <view style="background:#00ff00;width:100rpx;height:100rpx;color:#fff">3</view>
+            <view style="background:#f0f0f0;width:100rpx;height:100rpx;color:#fff">4</view>
+            <view style="background:#ffff00;width:100rpx;height:100rpx;color:#fff">5</view>
+            <view style="background:#00ffff;width:100rpx;height:100rpx;color:#fff">6</view>
+            <view style="background:#f0000f;width:100rpx;height:100rpx;color:#fff">7</view>
+            <view style="background:#00B7FF;width:100rpx;height:100rpx;color:#fff">8</view>
+            <view style="background:#cfcfcf;width:100rpx;height:100rpx;color:#fff">9</view>
+          </view>
+          wrap
+          <view style="display:flex;flex-wrap:wrap">
+            <view style="background:#ff00ff;width:100rpx;height:100rpx;color:#fff">1</view>
+            <view style="background:#0000ff;width:100rpx;height:100rpx;color:#fff">2</view>
+            <view style="background:#00ff00;width:100rpx;height:100rpx;color:#fff">3</view>
+            <view style="background:#f0f0f0;width:100rpx;height:100rpx;color:#fff">4</view>
+            <view style="background:#ffff00;width:100rpx;height:100rpx;color:#fff">5</view>
+            <view style="background:#00ffff;width:100rpx;height:100rpx;color:#fff">6</view>
+            <view style="background:#f0000f;width:100rpx;height:100rpx;color:#fff">7</view>
+            <view style="background:#00B7FF;width:100rpx;height:100rpx;color:#fff">8</view>
+            <view style="background:#cfcfcf;width:100rpx;height:100rpx;color:#fff">9</view>
+          </view>
+          wrap-reverse
+          <view style="display:flex;flex-wrap:wrap-reverse">
+            <view style="background:#ff00ff;width:100rpx;height:100rpx;color:#fff">1</view>
+            <view style="background:#0000ff;width:100rpx;height:100rpx;color:#fff">2</view>
+            <view style="background:#00ff00;width:100rpx;height:100rpx;color:#fff">3</view>
+            <view style="background:#f0f0f0;width:100rpx;height:100rpx;color:#fff">4</view>
+            <view style="background:#ffff00;width:100rpx;height:100rpx;color:#fff">5</view>
+            <view style="background:#00ffff;width:100rpx;height:100rpx;color:#fff">6</view>
+            <view style="background:#f0000f;width:100rpx;height:100rpx;color:#fff">7</view>
+            <view style="background:#00B7FF;width:100rpx;height:100rpx;color:#fff">8</view>
+            <view style="background:#cfcfcf;width:100rpx;height:100rpx;color:#fff">9</view>
+          </view>
+        </view>
+        <view style="font-weight: bold">justify-content</view>
+        <view style="margin:30rpx;">
+          none
+          <view style="display:flex;justify-content:none">
+            <view style="background:#ff00ff;width:100rpx;height:100rpx;color:#fff">1</view>
+            <view style="background:#0000ff;width:100rpx;height:100rpx;color:#fff">2</view>
+            <view style="background:#00ff00;width:100rpx;height:100rpx;color:#fff">3</view>
+          </view>
+          center
+          <view style="display:flex;justify-content:center">
+            <view style="background:#ff00ff;width:100rpx;height:100rpx;color:#fff">1</view>
+            <view style="background:#0000ff;width:100rpx;height:100rpx;color:#fff">2</view>
+            <view style="background:#00ff00;width:100rpx;height:100rpx;color:#fff">3</view>
+          </view>
+          flex-start
+          <view style="display:flex;justify-content:flex-start">
+            <view style="background:#ff00ff;width:100rpx;height:100rpx;color:#fff">1</view>
+            <view style="background:#0000ff;width:100rpx;height:100rpx;color:#fff">2</view>
+            <view style="background:#00ff00;width:100rpx;height:100rpx;color:#fff">3</view>
+          </view>
+          flex-end
+          <view style="display:flex;justify-content:flex-end">
+            <view style="background:#ff00ff;width:100rpx;height:100rpx;color:#fff">1</view>
+            <view style="background:#0000ff;width:100rpx;height:100rpx;color:#fff">2</view>
+            <view style="background:#00ff00;width:100rpx;height:100rpx;color:#fff">3</view>
+          </view>
+          space-between
+          <view style="display:flex;justify-content:space-between">
+            <view style="background:#ff00ff;width:100rpx;height:100rpx;color:#fff">1</view>
+            <view style="background:#0000ff;width:100rpx;height:100rpx;color:#fff">2</view>
+            <view style="background:#00ff00;width:100rpx;height:100rpx;color:#fff">3</view>
+          </view>
+          space-around
+          <view style="display:flex;justify-content:space-around">
+            <view style="background:#ff00ff;width:100rpx;height:100rpx;color:#fff">1</view>
+            <view style="background:#0000ff;width:100rpx;height:100rpx;color:#fff">2</view>
+            <view style="background:#00ff00;width:100rpx;height:100rpx;color:#fff">3</view>
+          </view>
+        </view>
+        <view style="font-weight: bold">align-items</view>
+        <view style="margin:30rpx;">
+          stretch
+          <view style="display:flex;align-items:stretch;height:400rpx;background:#ccc">
+            <view style="background:#ff00ff;width:100rpx;color:#fff">1</view>
+            <view style="background:#0000ff;width:100rpx;color:#fff">2</view>
+            <view style="background:#00ff00;width:100rpx;color:#fff">3</view>
+          </view>
+          center
+          <view style="display:flex;align-items:center;height:400rpx;background:#ccc">
+            <view style="background:#ff00ff;width:100rpx;height:100rpx;color:#fff">1</view>
+            <view style="background:#0000ff;width:100rpx;height:100rpx;color:#fff">2</view>
+            <view style="background:#00ff00;width:100rpx;height:100rpx;color:#fff">3</view>
+          </view>
+          flex-start
+          <view style="display:flex;align-items:flex-start;height:400rpx;background:#ccc">
+            <view style="background:#ff00ff;width:100rpx;height:100rpx;color:#fff">1</view>
+            <view style="background:#0000ff;width:100rpx;height:100rpx;color:#fff">2</view>
+            <view style="background:#00ff00;width:100rpx;height:100rpx;color:#fff">3</view>
+          </view>
+          flex-end
+          <view style="display:flex;align-items:flex-end;height:400rpx;background:#ccc">
+            <view style="background:#ff00ff;width:100rpx;height:100rpx;color:#fff">1</view>
+            <view style="background:#0000ff;width:100rpx;height:100rpx;color:#fff">2</view>
+            <view style="background:#00ff00;width:100rpx;height:100rpx;color:#fff">3</view>
+          </view>
+          baseline:各项目第一行文字的基线对齐
+          <view style="display:flex;align-items:baseline;height:400rpx;background:#ccc">
+            <view style="background:#ff00ff;width:100rpx;height:100rpx;color:#fff">1</view>
+            <view style="background:#0000ff;width:80rpx;height:80rpx;color:#fff">2</view>
+            <view style="background:#00ff00;width:60rpx;height:60rpx;color:#fff">3</view>
+          </view>
+        </view>
+        <view style="font-weight: bold">align-content</view>
+        <view style="margin:30rpx;">
+          stretch
+          <view style="display:flex;flex-wrap:wrap;align-content:stretch;height:400rpx;background:#ccc">
+            <view style="background:#ff00ff;width:100rpx;color:#fff">1</view>
+            <view style="background:#0000ff;width:100rpx;color:#fff">2</view>
+            <view style="background:#00ff00;width:100rpx;color:#fff">3</view>
+            <view style="background:#f0f0f0;width:100rpx;color:#fff">4</view>
+            <view style="background:#ffff00;width:100rpx;color:#fff">5</view>
+            <view style="background:#00ffff;width:100rpx;color:#fff">6</view>
+            <view style="background:#f0000f;width:100rpx;color:#fff">7</view>
+            <view style="background:#00B7FF;width:100rpx;color:#fff">8</view>
+            <view style="background:#cfcfcf;width:100rpx;color:#fff">9</view>
+          </view>
+          center
+          <view style="display:flex;flex-wrap:wrap;align-content:center;height:400rpx;background:#ccc">
+            <view style="background:#ff00ff;width:100rpx;height:100rpx;color:#fff">1</view>
+            <view style="background:#0000ff;width:100rpx;height:100rpx;color:#fff">2</view>
+            <view style="background:#00ff00;width:100rpx;height:100rpx;color:#fff">3</view>
+            <view style="background:#f0f0f0;width:100rpx;height:100rpx;color:#fff">4</view>
+            <view style="background:#ffff00;width:100rpx;height:100rpx;color:#fff">5</view>
+            <view style="background:#00ffff;width:100rpx;height:100rpx;color:#fff">6</view>
+            <view style="background:#f0000f;width:100rpx;height:100rpx;color:#fff">7</view>
+            <view style="background:#00B7FF;width:100rpx;height:100rpx;color:#fff">8</view>
+            <view style="background:#cfcfcf;width:100rpx;height:100rpx;color:#fff">9</view>
+          </view>
+          flex-start
+          <view style="display:flex;flex-wrap:wrap;align-content:flex-start;height:400rpx;background:#ccc">
+            <view style="background:#ff00ff;width:100rpx;height:100rpx;color:#fff">1</view>
+            <view style="background:#0000ff;width:100rpx;height:100rpx;color:#fff">2</view>
+            <view style="background:#00ff00;width:100rpx;height:100rpx;color:#fff">3</view>
+            <view style="background:#f0f0f0;width:100rpx;height:100rpx;color:#fff">4</view>
+            <view style="background:#ffff00;width:100rpx;height:100rpx;color:#fff">5</view>
+            <view style="background:#00ffff;width:100rpx;height:100rpx;color:#fff">6</view>
+            <view style="background:#f0000f;width:100rpx;height:100rpx;color:#fff">7</view>
+            <view style="background:#00B7FF;width:100rpx;height:100rpx;color:#fff">8</view>
+            <view style="background:#cfcfcf;width:100rpx;height:100rpx;color:#fff">9</view>
+          </view>
+          flex-end
+          <view style="display:flex;flex-wrap:wrap;align-content:flex-end;height:400rpx;background:#ccc">
+            <view style="background:#ff00ff;width:100rpx;height:100rpx;color:#fff">1</view>
+            <view style="background:#0000ff;width:100rpx;height:100rpx;color:#fff">2</view>
+            <view style="background:#00ff00;width:100rpx;height:100rpx;color:#fff">3</view>
+            <view style="background:#f0f0f0;width:100rpx;height:100rpx;color:#fff">4</view>
+            <view style="background:#ffff00;width:100rpx;height:100rpx;color:#fff">5</view>
+            <view style="background:#00ffff;width:100rpx;height:100rpx;color:#fff">6</view>
+            <view style="background:#f0000f;width:100rpx;height:100rpx;color:#fff">7</view>
+            <view style="background:#00B7FF;width:100rpx;height:100rpx;color:#fff">8</view>
+            <view style="background:#cfcfcf;width:100rpx;height:100rpx;color:#fff">9</view>
+          </view>
+          space-between
+          <view style="display:flex;flex-wrap:wrap;align-content:space-between;height:400rpx;background:#ccc">
+            <view style="background:#ff00ff;width:100rpx;height:100rpx;color:#fff">1</view>
+            <view style="background:#0000ff;width:100rpx;height:100rpx;color:#fff">2</view>
+            <view style="background:#00ff00;width:100rpx;height:100rpx;color:#fff">3</view>
+            <view style="background:#f0f0f0;width:100rpx;height:100rpx;color:#fff">4</view>
+            <view style="background:#ffff00;width:100rpx;height:100rpx;color:#fff">5</view>
+            <view style="background:#00ffff;width:100rpx;height:100rpx;color:#fff">6</view>
+            <view style="background:#f0000f;width:100rpx;height:100rpx;color:#fff">7</view>
+            <view style="background:#00B7FF;width:100rpx;height:100rpx;color:#fff">8</view>
+            <view style="background:#cfcfcf;width:100rpx;height:100rpx;color:#fff">9</view>
+          </view>
+          space-around
+          <view style="display:flex;flex-wrap:wrap;align-content:space-around;height:400rpx;background:#ccc">
+            <view style="background:#ff00ff;width:100rpx;height:100rpx;color:#fff">1</view>
+            <view style="background:#0000ff;width:100rpx;height:100rpx;color:#fff">2</view>
+            <view style="background:#00ff00;width:100rpx;height:100rpx;color:#fff">3</view>
+            <view style="background:#f0f0f0;width:100rpx;height:100rpx;color:#fff">4</view>
+            <view style="background:#ffff00;width:100rpx;height:100rpx;color:#fff">5</view>
+            <view style="background:#00ffff;width:100rpx;height:100rpx;color:#fff">6</view>
+            <view style="background:#f0000f;width:100rpx;height:100rpx;color:#fff">7</view>
+            <view style="background:#00B7FF;width:100rpx;height:100rpx;color:#fff">8</view>
+            <view style="background:#cfcfcf;width:100rpx;height:100rpx;color:#fff">9</view>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      2
+    </swiper-item>
+  </swiper>
+</view>

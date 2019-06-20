@@ -1,0 +1,13 @@
+<view class="top-tab">
+  <!-- 单个tab -->
+  <view class="flex-item" wx:for="{{indicatorTextArray}}" wx:for-index="id" id="{{id}}" bindtap="switchTab">
+    <!-- 文字样式 -->
+    <view class="{{currentTab==id ?'text-color-select':''}}">
+      {{item}}
+    </view>
+    <!-- 分割线样式 -->
+    <view class="partition-line-bg">
+      <view style="width:{{750/indicatorTextArray.length*currentLinePercentage}}rpx;" class="{{currentTab==id ? 'partition-line-select ' : 'partition-line-empty'}}"/>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,2 @@
+<view>{{address}}</view>
+ <map class="map" longitude="{{longitude}}" latitude="{{latitude}}" show-location="true"  markers="{{markers}}" bindmarkertap="makertap" bindcontroltap="controltap" bindcallouttap="callouttap" /> 

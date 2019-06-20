@@ -1,0 +1,10 @@
+<view>
+  <view>广告蒙层效果</view>
+  <block wx:if="{{showModalStatus}}">
+    <view>
+      <view class="drawer_screen " catchtouchmove='false' bindtap="powerDrawer " data-statu="close " />
+      <image src="/images/gg.jpg " class="drawer_2 " />
+      <image src="/images/delete.png " class="drawer_3 " bindtap="deleteAd" />
+    </view>
+  </block>
+</view>

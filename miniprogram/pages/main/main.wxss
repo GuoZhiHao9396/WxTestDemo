@@ -1,0 +1,43 @@
+/* pages/main/main.wxss */
+
+.item-style {
+  line-height: 60rpx;
+  padding: 20rpx;
+  box-shadow: 0 1px 1px #bebebe;
+}
+
+.compile {
+  right: 0;
+  bottom: 0;
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0rpx 0rpx 2rpx #888;
+}
+
+.compile-bg {
+  border-radius: 10rpx;
+  padding: 20rpx;
+  border:1rpx solid #fff;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  margin-left: 81%;
+  margin-bottom: 110rpx;
+  border-top: 19rpx solid #fff;
+  border-right: 18rpx solid transparent;
+  border-left: 18rpx solid transparent;
+}
+
+.open-compile {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+}

@@ -1,0 +1,20 @@
+<view style="display:flex;flex-direction: column;">
+  <text class="fa fa-address-book" style="color:#099999;"></text>
+  <view style="word-break: break-all;">
+    <text class="iconfont icon-addressbook_fill" style="font-size:50rpx;color:#ff0000" />
+    <text>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</text>
+    <image src="/images/excel.png" style="width:50rpx;height:50rpx;" />
+    <text class="iconfont icon-addpeople" style="font-size:60rpx;color:#00ff00" />
+    <text>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</text>
+  </view>
+  <text class="iconfont icon-addpeople" style="font-size:60rpx;color:#00ff00" />
+  <text class="iconfont icon-addpeople_fill" style="font-size:70rpx;color:#0000ff" />
+  <text class="iconfont icon-addition" style="font-size:80rpx;color:#110000" />
+  <text class="iconfont icon-addition_fill" style="font-size:90rpx;color:#001100" />
+  <text class="iconfont icon-add" style="font-size:100rpx;color:#000011" />
+  <text class="iconfont icon-activity_fill" style="font-size:110rpx;color:#990000" />
+  <text class="iconfont icon-activity_fill" style="font-size:120rpx;color:#009900" />
+  <text class="iconfont icon-accessory" style="font-size:130rpx;color:#000099" />
+  <text class="iconfont icon-number_punctuation" style="font-size:140rpx;color:#000099" />
+  <text class="iconfont icon-number-2" style="font-size:150rpx;color:#099999" />
+</view>

@@ -1,0 +1,16 @@
+<!--button-->
+<view class="btn" bindtap="powerDrawer" data-statu="open">button</view>
+
+<!--mask-->
+<view class="drawer_screen" catchtouchmove='false' bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>
+<!--content-->
+<!--使用animation属性指定需要执行的动画-->
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">
+  <!--drawer content-->
+  <view class="drawer_title">弹窗标题</view>
+  <view style="width:650rpx;display:flex;">
+    <text class="drawer_content">{{content}}</text>
+  </view>
+  <view class="btn_ok" bindtap="powerDrawer" data-statu="close">确定</view>
+
+</view>

@@ -1,0 +1,8 @@
+<view>
+  <view style="display:flex;flex-direction: row;">
+    <input placeholder="请输入验证码" auto-focus style="padding:10rpx;width:510rpx;height:70rpx;" bindinput="getCode" />
+    <canvas bindtouchend="onRefreshCode" style="width:{{codData.width*2}}rpx;height:{{codData.height*2}}rpx;" canvas-id="canvas"></canvas>
+  </view>
+  <button bindtap="verificationCode">确认</button>
+</view>
+

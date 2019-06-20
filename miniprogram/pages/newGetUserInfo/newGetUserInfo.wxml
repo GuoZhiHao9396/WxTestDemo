@@ -1,0 +1,4 @@
+<button open-type="getUserInfo" bindgetuserinfo="getUserInfo">获取用户信息</button>
+<view style="margin:20rpx;font-size:28rpx">
+  <image src="{{userInfo.avatarUrl}}" style="width:80rpx;height:80rpx;border-radius: 50%;" /> {{userInfo.nickName}}
+</view>

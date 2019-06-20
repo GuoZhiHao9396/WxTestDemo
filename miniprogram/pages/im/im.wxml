@@ -1,0 +1,66 @@
+<import src="../../components/chat-input/chat-input.wxml" />
+<template is="chat-input" data="{{inputObj:inputObj,textMessage:textMessage,showVoicePart:true}}" />
+<!-- 列表 -->
+<scroll-view scroll-y scroll-top="{{scrollTop}}" style="height:{{scrollHeight}}vh">
+  <view id="chat-item" class="display flex-direction-column">
+    <block wx:for="{{chatItems}}" wx:key="">
+      <view id="item{{index}}" class="display flex-direction-column item-bg fs26">
+        <!-- 消息时间 -->
+        <block wx:if="{{item.showDate}}">
+          <view class="fs24 fc-gray text-align-center item-date-mb">{{item.date}}</view>
+        </block>
+        <view class="display flex-direction-row">
+          <!--===========Start 我发送的消息 ===========-->
+          <block wx:if="{{item.types=='0'}}">
+            <!-- 消息内容 -->
+            <view class="display flex justify-content-end item-content-mr">
+              <view>
+                <view data-index="{{index}}" class="chat-centact right-bg" bindtap="chatTap">
+                  <block wx:if="{{item.messagetype=='0'}}">
+                    {{item.text}}
+                  </block>
+                  <block wx:elif="{{item.messagetype=='1'}}">
+                    <image src="{{item.imageUrl}}" mode="widthFix" class="chat-img" />
+                  </block>
+                  <block wx:elif="{{item.messagetype=='2'}}">
+                    <view class="display flex-direction-row align-items-center">
+                      {{item.voiceTime}}"
+                      <image src="{{item.rightVoice}}" class="item-content-voice-mr" />
+                    </view>
+                  </block>
+                </view>
+              </view>
+            </view>
+            <!-- 用户头像 -->
+            <image src="{{item.userheadUrl}}" class="head-img" mode="aspectFill" />
+          </block>
+          <!--===========End 我发送的消息 ===========-->
+          <!--===========Start 好友发送的消息 ===========-->
+          <block wx:else>
+            <!-- 用户头像 -->
+            <image src="{{item.userheadUrl}}" class="head-img" mode="aspectFill" />
+            <!-- 消息内容 -->
+            <view class="display flex item-content-ml">
+              <view>
+                <view data-index="{{index}}" class="chat-centact left-bg" bindtap="chatTap">
+                  <block wx:if="{{item.messagetype=='0'}}">
+                    {{item.text}}
+                  </block>
+                  <block wx:elif="{{item.messagetype=='1'}}">
+                    <image src="{{item.imageUrl}}" mode="widthFix" class="chat-img" />
+                  </block>
+                  <block wx:elif="{{item.messagetype=='2'}}">
+                    <view class="display flex-direction-row align-items-center">
+                      <image src="{{item.leftVoice}}" class="item-content-voice-ml" />{{item.voiceTime}}"
+                    </view>
+                  </block>
+                </view>
+              </view>
+            </view>
+          </block>
+          <!--===========End 好友发送的消息 ===========-->
+        </view>
+      </view>
+    </block>
+  </view>
+</scroll-view>

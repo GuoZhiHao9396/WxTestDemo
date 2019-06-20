@@ -1,0 +1,2 @@
+<!--vid：视频id autoplay：自动播放 playerid：播放器标识符-->
+<txv-video vid="e0354z3cqjp" playerid="txv1" autoplay="{{true}}"></txv-video>

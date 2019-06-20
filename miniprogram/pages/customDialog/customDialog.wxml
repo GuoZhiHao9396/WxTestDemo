@@ -1,0 +1,9 @@
+<button bindtap="toggleBaseDialog">基础 Dialog</button>
+<button bindtap="toggleWithoutTitleDialog">Dialog - 无标题</button>
+<button bindtap="toggleVerticalDialog">Dialog - 按钮纵向排布</button>
+<button bindtap="toggleButtonDialog">Dialog - 自定义显示按钮</button>
+
+<zan-dialog id="zan-base-dialog"></zan-dialog>
+<zan-dialog id="zan-no-title-dialog"></zan-dialog>
+<zan-dialog id="zan-button-dialog"></zan-dialog>
+<zan-dialog id="zan-vertical-dialog"></zan-dialog>

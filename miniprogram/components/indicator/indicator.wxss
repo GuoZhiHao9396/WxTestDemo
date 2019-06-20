@@ -1,0 +1,48 @@
+/* 最外层样式 */
+
+.top-tab {
+  color: #999;
+  display: flex;
+  width: 750rpx;
+  height: 100rpx;
+  font-size: 28rpx;
+  background: white;
+  padding-bottom: 2px;
+  line-height: 100rpx;
+  box-shadow: 0 1px 1px #bebebe;
+}
+
+/* 单个tab样式 */
+
+.flex-item {
+  flex-grow: 1;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+/* 选中的字体颜色样式 */
+
+.text-color-select {
+  color: #13a4fe;
+}
+
+/* 分割线背景样式 */
+
+.partition-line-bg {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* 选中的分割线样式 */
+
+.partition-line-select {
+  border-bottom: solid 2px #13a4fe;
+}
+
+/* 未选中的分割线样式 */
+
+.partition-line-empty {
+  border-bottom: solid 2px #fff;
+}

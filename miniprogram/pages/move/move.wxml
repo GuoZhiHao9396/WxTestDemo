@@ -1,0 +1,7 @@
+<view style="display:flex;flex-direction: column;">
+  <view class='view' style="left:{{left}}px;top:{{top}}px;" bindtouchmove="viewTouchMove">我可拖动</view>
+  <movable-area style="height: 200px;width: 200px;background: red;margin-top:300rpx;">
+    <movable-view direction="all" style="height: 50px; width: 50px; background: blue;">
+    </movable-view>
+  </movable-area>
+</view>

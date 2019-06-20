@@ -1,0 +1,55 @@
+.ks-content {
+  padding: 6rpx;
+  text-align: justify;
+  background: #f1f3f2;
+}
+
+.item {
+  background-color: #fff;
+  margin-bottom: 8rpx;
+  position: relative;
+}
+
+.item-ava {
+  width: 55rpx;
+  height: 55rpx;
+  border-radius: 50%;
+}
+
+.item-img {
+  width: 367rpx;
+}
+
+.item-live-txt {
+  display: flex;
+  background:rgba(0, 0, 0, 0.5);
+  color: #fff;
+  top: 0;
+  position: absolute;
+  border-radius: 30rpx;
+  padding: 5rpx 15rpx;
+  font-size: 22rpx;
+  margin: 10rpx;
+}
+
+.item-time {
+  color: #bdbebe;
+  float: right;
+  margin-top: 35rpx;
+}
+
+.item .name {
+  display: flex;
+  padding: 0 15rpx;
+  margin-top: -35rpx;
+  padding-bottom: 10rpx;
+  font-size: 18rpx;
+}
+
+.left, .right {
+  display: inline-block;
+}
+
+.right {
+  float: right;
+}

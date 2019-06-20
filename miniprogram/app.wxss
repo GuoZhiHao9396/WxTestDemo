@@ -1,0 +1,239 @@
+/**app.wxss**/
+@import 'components/wux.wxss';
+
+.navigator {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  background: #4b99fc;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 999;
+}
+
+.navigator-back {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigator-back image {
+  height: 25px;
+  width: 50px;
+}
+
+.navigator-title {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigator-title text {
+  color: #fff;
+  font-size: 34rpx;
+  font-weight: 400;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  font-size: 30rpx;
+}
+
+.display {
+  display: flex;
+}
+
+.displayblock {
+  display: block;
+}
+
+.theme-color-red {
+  background-color: #d81e06;
+}
+
+.theme-color-transparency {
+  background-color: transparent;
+}
+
+.background-color-main {
+  background-color: #f7f7fa;
+}
+
+.background-color-white {
+  background-color: #fff;
+}
+
+.background-color-black {
+  background-color: #333;
+}
+
+.flex-direction-column {
+  flex-direction: column;
+}
+
+.flex-direction-row {
+  flex-direction: row;
+}
+
+.flex-wrap-wrap {
+  flex-wrap: wrap;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-baseline {
+  align-items: baseline;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-content-between {
+  align-content: space-between;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.align-content-end {
+  align-content: flex-end;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+}
+
+.item-noclick-background {
+  background: #fff;
+}
+
+.item-click-background {
+  background: #ececec;
+}
+
+.fs10 {
+  font-size: 10rpx;
+}
+
+.fs12 {
+  font-size: 12rpx;
+}
+
+.fs14 {
+  font-size: 14rpx;
+}
+
+.fs16 {
+  font-size: 16rpx;
+}
+
+.fs18 {
+  font-size: 18rpx;
+}
+
+.fs20 {
+  font-size: 20rpx;
+}
+
+.fs22 {
+  font-size: 22rpx;
+}
+
+.fs24 {
+  font-size: 24rpx;
+}
+
+.fs26 {
+  font-size: 26rpx;
+}
+
+.fs28 {
+  font-size: 28rpx;
+}
+
+.fs30 {
+  font-size: 30rpx;
+}
+
+.fs32 {
+  font-size: 32rpx;
+}
+
+.fs34 {
+  font-size: 34rpx;
+}
+
+.fs36 {
+  font-size: 36rpx;
+}
+
+.fs38 {
+  font-size: 38rpx;
+}
+
+.fs48 {
+  font-size: 48rpx;
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+.h-line {
+  background-color: #ececec;
+  height: 0.5rpx;
+}
+
+.s-line {
+  background-color: #ececec;
+  width: 0.5rpx;
+  height: 100%;
+}
+
+.fc-white {
+  color: #fff;
+}
+
+.fc-black {
+  color: #333;
+}
+
+.fc-gray {
+  color: #999;
+}
+
+.single-h {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.single-h2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.form {
+  flex: 1;
+  margin: 2px 0;
+}
+
+.flex {
+  flex: 1;
+}

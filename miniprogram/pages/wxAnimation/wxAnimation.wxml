@@ -1,0 +1,48 @@
+<view class="container" style="padding:30rpx;">
+  <text style="margin-bottom:20rpx;">js动画</text>
+  <view class="display flex-direction-row" style="flex-wrap:wrap">
+    <view class="display align-items-center justify-content-center text-align-center button-bg" bindtap='translateTap'>偏移</view>
+    <view class="display align-items-center justify-content-center text-align-center button-bg" bindtap='rotateTap'>旋转</view>
+    <view class="display align-items-center justify-content-center text-align-center button-bg" bindtap='scaleTap'>缩放</view>
+    <view class="display align-items-center justify-content-center text-align-center button-bg" bindtap='skewTap'>倾斜</view>
+    <view class="display align-items-center justify-content-center text-align-center button-bg" bindtap='queueTap'>队列</view>
+    <view class="display align-items-center justify-content-center text-align-center button-bg" bindtap='continueStartTap'>持续动画-开始</view>
+    <view class="display align-items-center justify-content-center text-align-center button-bg" bindtap='continueEndTap'>持续动画-结束</view>
+  </view>
+  <text style="margin-bottom:20rpx;">css动画</text>
+  <view class="display flex-direction-row" style="flex-wrap:wrap">
+    <view class="display align-items-center justify-content-center text-align-center button-bg" bindtap='translateTap2'>偏移</view>
+    <view class="display align-items-center justify-content-center text-align-center button-bg" bindtap='rotateTap2'>旋转</view>
+    <view class="display align-items-center justify-content-center text-align-center button-bg" bindtap='scaleTap2'>缩放</view>
+    <view class="display align-items-center justify-content-center text-align-center button-bg" bindtap='skewTap2'>倾斜</view>
+    <view class="display align-items-center justify-content-center text-align-center button-bg" bindtap='queueTap2'>队列</view>
+    <view class="display align-items-center justify-content-center text-align-center button-bg" bindtap='continueStartTap2'>持续动画-开始</view>
+    <view class="display align-items-center justify-content-center text-align-center button-bg" bindtap='continueEndTap2'>持续动画-结束</view>
+  </view>
+  <view class="display align-items-center justify-content-center" style="width:690rpx;height:600rpx;background:#ddd;">
+    <block wx:if="{{jsOrcss}}">
+      <image animation="{{animationData}}" src='/images/ppt.png' style="width:100rpx;height:100rpx;" bindtap='imageTap' />
+    </block>
+    <block wx:else>
+      <block wx:if="{{translateBoole}}">
+        <image class="translateAnimation" src='/images/ppt.png' style="width:100rpx;height:100rpx;" bindtap='imageTap' />
+      </block>
+      <block wx:elif="{{rotateBoole}}">
+        <image class="rotateAnimation" src='/images/ppt.png' style="width:100rpx;height:100rpx;" bindtap='imageTap' />
+      </block>
+      <block wx:elif="{{scaleBoole}}">
+        <image class="scaleAnimation" src='/images/ppt.png' style="width:100rpx;height:100rpx;" bindtap='imageTap' />
+      </block>
+      <block wx:elif="{{skewBoole}}">
+        <image class="skewAnimation" src='/images/ppt.png' style="width:100rpx;height:100rpx;" bindtap='imageTap' />
+      </block>
+      <block wx:elif="{{queueBoole}}">
+        <image class="queueAnimation" src='/images/ppt.png' style="width:100rpx;height:100rpx;" bindtap='imageTap' />
+      </block>
+      <block wx:elif="{{continueBoole}}">
+        <image class=" {{continueBoole2?'continueAnimation2':'continueAnimation'}}" src='/images/ppt.png' style="width:100rpx;height:100rpx;" bindtap='imageTap' />
+      </block>
+    </block>
+
+  </view>
+</view>

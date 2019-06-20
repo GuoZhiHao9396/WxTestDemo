@@ -1,0 +1,19 @@
+<view class="container">
+  <view class="display flex-direction-row" style="padding:40rpx;">
+    <view class="flex">
+      <view class="demo__icon">
+        <zan-badge>9</zan-badge>
+      </view>
+    </view>
+    <view class="flex">
+      <view class="demo__icon">
+        <zan-badge>19</zan-badge>
+      </view>
+    </view>
+    <view class="flex">
+      <view class="demo__icon">
+        <zan-badge background-color="#4b0" box-shadow="none" font-size="{{ 12 }}">99+</zan-badge>
+      </view>
+    </view>
+  </view>
+</view>

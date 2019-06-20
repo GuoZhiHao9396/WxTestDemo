@@ -1,0 +1,7 @@
+<import src="../../components/toast/index.wxml" />
+<view style="height:100vh">
+  <view id="{{index}}" wx:for="{{listData}}" wx:key="{{index}}" class="item-style" bindtap='itemOnClick'>
+    {{item}}
+  </view>
+</view>
+<zan-toast id="zan-toast"/>

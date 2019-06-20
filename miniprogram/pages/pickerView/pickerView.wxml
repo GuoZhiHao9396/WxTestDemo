@@ -1,0 +1,4 @@
+<import src="../../components/picker/picker.wxml" />
+<template is="picker" data="{{ ...$wux.picker.phone }}" /> 
+
+<button type="default" bindtap="onTapPhone">Default-Picker {{ phone }}</button>

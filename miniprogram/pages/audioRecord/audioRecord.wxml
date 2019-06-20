@@ -1,0 +1,4 @@
+<button bindtap="startRecord">开始录音</button>
+<button bindtap="stopRecord">停止录音</button>
+<button bindtap="playRecord">播放录音</button>
+<text style="padding:30rpx;">{{tempFilePath}}</text>

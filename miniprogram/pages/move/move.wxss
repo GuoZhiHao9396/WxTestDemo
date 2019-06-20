@@ -1,0 +1,12 @@
+page{
+  height: 100%;
+}
+.view{
+    position: absolute;
+    height:120px;
+    width:120px;
+    background:red;
+    color: white;
+    text-align: center;
+    line-height: 120px;
+}

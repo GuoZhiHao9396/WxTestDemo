@@ -1,0 +1,13 @@
+<indicator-view indicatorTextArray="{{citys}}" currentTab="{{currentTab}}" currentLinePercentage="{{percentage}}" bindswitchTab="switchIndicator" />
+<block wx:for="{{citys}}">
+  <view wx:if="{{currentTab==index}}" style="width:750rpx;height:300rpx;background:#00ffff;color:#ffff00;">{{item}}</view>
+</block>
+固定点击
+<swiper current="{{currentTab}}" bindchange="swiperChange">
+  <block wx:for="{{citys}}">
+    <swiper-item style="width:750rpx;height:300rpx;background:#ffff00;color:#00ffff;">
+      {{item}}
+    </swiper-item>
+  </block>
+</swiper>
+滑动/点击

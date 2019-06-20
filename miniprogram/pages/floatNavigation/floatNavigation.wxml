@@ -1,0 +1,13 @@
+<view class='container'>
+  <view class='navigation {{pageVariable.isFloat == true ? "float-navigation":""}}'>
+    <view class='{{policyFilter.curSelectNavigationItemFormate(pageVariable.curSelectedItemId,"0")}}' data-id='0' catchtap='selectNavigationItem'>全部</view>
+    <view class='{{policyFilter.curSelectNavigationItemFormate(pageVariable.curSelectedItemId,"1")}}' data-id='1' catchtap='selectNavigationItem'>保障中</view>
+    <view class='{{policyFilter.curSelectNavigationItemFormate(pageVariable.curSelectedItemId,"2")}}' data-id='2' catchtap='selectNavigationItem'>已生效</view>
+    <view class='{{policyFilter.curSelectNavigationItemFormate(pageVariable.curSelectedItemId,"3")}}' data-id='3' catchtap='selectNavigationItem'>未生效</view>
+  </view>
+  <block wx:for="{{20}}">
+    <view style="height:100rpx;border-bottom:1rpx solid #ccc;">
+       第{{index}}天
+    </view>
+  </block>
+</view>

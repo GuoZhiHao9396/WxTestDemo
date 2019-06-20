@@ -1,0 +1,93 @@
+@import "../../components/chat-input/chat-input.wxss";
+
+page {
+  background: #f1f1f1;
+}
+
+.item-bg {
+  padding: 20rpx;
+}
+
+.item-date-mb {
+  margin-bottom: 20rpx;
+}
+
+.item-content-mr {
+  margin-right: 40rpx;
+}
+
+.item-content-ml {
+  margin-left: 40rpx;
+}
+
+.item-content-voice-mr {
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 10rpx;
+}
+
+.item-content-voice-ml {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}
+
+.chat-centact {
+  position: relative;
+  display: inline-block;
+  padding: 20rpx;
+  min-height: 40rpx;
+  max-width: 420rpx;
+  border-radius: 6rpx;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  color: #666;
+  line-height: 40rpx;
+}
+
+.chat-centact::before {
+  position: absolute;
+  top: 26rpx;
+  right: -7px;
+  z-index: 100;
+  display: inline-block;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  content: "";
+  border-top: 8px solid transparent;
+  border-right: 8px solid #333;
+  border-bottom: 8px solid transparent;
+  border-left: 0 dotted;
+  vertical-align: middle;
+  transform: rotate(180deg);
+  border-right-color: #fff;
+}
+
+.chat-centact.right-bg {
+  background: #5db85d;
+  color: #fff;
+}
+
+.chat-centact.right-bg::before {
+  border-right-color: #5db85d;
+}
+
+.chat-centact.left-bg::before {
+  right: initial;
+  left: -7px;
+  border-right: 0 dotted;
+  border-left: 8px solid #333;
+  border-left-color: #fff;
+}
+
+.chat-img {
+  display: block;
+  max-width: 100%;
+}
+
+.head-img {
+  width: 80rpx;
+  height:80rpx;
+  border-radius: 6rpx;
+}

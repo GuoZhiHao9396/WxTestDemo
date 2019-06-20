@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "indicator-view": "../../components/indicator/indicator"
+  }
+}

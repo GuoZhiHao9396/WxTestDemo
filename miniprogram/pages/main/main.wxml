@@ -1,0 +1,33 @@
+<!-- 标题栏  -->
+<view class='navigator' style='padding-top:{{STATUS_BAR_HEIGHT}}px;'>
+  <view class='navigator-title'>
+    <text>我是自定义标题栏哦</text>
+  </view>
+</view>
+
+<view style="height:100vh;margin-top:{{50+STATUS_BAR_HEIGHT}}px;">
+  <!-- catchtouchmove：设置内容是否允许滑动 -->
+  <view id="{{index}}" wx:for="{{listData}}" wx:key="{{index}}" class="item-style fs26" bindtap='itemOnClick'>
+    {{item}}
+  </view>
+</view>
+<!-- 半透明阴影 -->
+<view catchtouchmove="{{isShow?true:false}}" class="{{isShow?'open-compile':''}}" />
+<!-- 操作部分 -->
+<view class="display flex-direction-column" style="position:fixed;bottom:40px;right:40rpx;">
+  <view animation="{{animationData}}">
+    <!--Start 显示操作布局 -->
+    <view hidden="{{isShow?false:true}}" catchtouchmove class="display flex-direction-row background-color-white compile-bg">
+      <view class="display flex-direction-column fs26 align-items-center" style="width:160rpx;">
+        <image src="../../images/excel.png" style="border-radius:50%;width:60rpx;height:60rpx;" /> 作业
+      </view>
+      <view class="display flex-direction-column fs26 align-items-center" style="width:160rpx;">
+        <image src="../../images/txt.png" style="border-radius:50%;width:60rpx;height:60rpx;" /> 通知
+      </view>
+    </view>
+    <!-- 向下箭头 -->
+    <view hidden="{{isShow?false:true}}" class="arrow" />
+  </view>
+  <!--End 显示操作布局 -->
+  <image mode="aspectFill" src="../../images/{{isShow?'sc':'bj'}}.png" class="compile" bindtap="showDialog" />
+</view>

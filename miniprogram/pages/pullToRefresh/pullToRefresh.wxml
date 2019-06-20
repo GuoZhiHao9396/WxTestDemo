@@ -1,0 +1,22 @@
+<indicator-view indicatorTextArray="{{titlelist}}" currentTab="{{currentNavtab}}" currentLinePercentage="1" bindswitchTab="onSwitchTab" />
+<block wx:if="{{currentNavtab=='0'}}">
+  <!-- 列表数据 -->
+  <view wx:for="{{list1}}" class="item-style">
+    {{item}}
+  </view>
+  <loading hidden="{{hidden}}">加载中1</loading>
+  <view hidden="{{hidden}}" style="text-align: center;padding: 20rpx;">正在加载...</view>
+</block>
+<block wx:else>
+  <loading hidden="{{hidden}}">加载中2</loading>
+  <scroll-view scroll-y style="height: 600px" bindscrolltolower="loadMore">
+    <!-- 列表数据 -->
+    <view wx:for="{{list2}}" class="item-style">
+      {{item}}
+    </view>
+    <!-- 底部加载 -->
+    <view wx:if="{{hasMore}}" style="text-align: center;padding: 20rpx;">玩命的加载中...</view>
+    <view wx:else style="text-align: center;padding: 20rpx;">没有更多内容了</view>
+  </scroll-view>
+
+</block>

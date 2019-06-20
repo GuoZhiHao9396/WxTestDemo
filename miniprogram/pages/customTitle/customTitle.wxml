@@ -1,0 +1,12 @@
+<!-- 标题栏  -->
+<view class='navigator' style='padding-top:{{STATUS_BAR_HEIGHT}}px;'>
+  <view class='navigator-back' bindtap='goBackHandler'>
+    <image src='../../images/back.svg' />
+  </view>
+  <view class='navigator-title'>
+    <text>自定义标题栏</text>
+  </view>
+</view>
+<view style="margin-top:{{50+STATUS_BAR_HEIGHT}}px;">
+  自定义配置：在app.json中的window对象中设置"navigationStyle": "custom"属性。注意：导航栏的高度，别忘了
+</view>

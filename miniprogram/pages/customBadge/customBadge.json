@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "zan-badge": "../../components/badge/index"
+  }
+}
